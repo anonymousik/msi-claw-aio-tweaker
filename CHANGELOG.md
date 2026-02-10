@@ -2,7 +2,7 @@
 
 ### v5.0.0 Professional Edition (2026-02-10)
 
-#### Added
+#### Added 
 ### ✅ Bezpieczeństwo (Security-First)
 ```diff
 + SHA256 verification wszystkich downloads
@@ -12,7 +12,6 @@
 + Least privilege (elevation tylko gdy potrzebne)
 + Backup before changes (auto-rollback)
 ```
-
 ### ✅ Auto-Diagnostyka i Self-Healing
 ```diff
 + Automatic hardware detection (MSI Claw A1M, 8 AI+)
@@ -22,7 +21,6 @@
 + Auto-repair common issues (Memory Integrity, Game DVR, etc.)
 + Service health check
 ```
-
 ### ✅ Modular Architecture
 ```diff
 + Separacja odpowiedzialności (Diagnostics, Utils, Optimization, Backup)
@@ -30,7 +28,6 @@
 + Łatwe dodawanie nowych funkcji
 + Better maintainability
 ```
-
 ### ✅ Auto-Update System
 ```diff
 + Automatic update checks przy starcie
@@ -38,7 +35,6 @@
 + Semantic versioning (x.y.z)
 + Changelog display
 ```
-
 ### ✅ User Experience
 ```diff
 + Auto-privilege escalation (nie trzeba ręcznie "Run as Admin")
@@ -51,6 +47,7 @@
 ### v4.0.0 Professional Edition (2026-02-08)
 
 #### Added
+```diff
 - Kompletne przepisanie architektury
 - System automatycznych backupów
 - Zaawansowane logowanie
@@ -61,19 +58,21 @@
 - System powiadomień
 - Compliance z PowerShell Analyzer
 - Pełna dokumentacja
-
+```
 #### Changed
+```diff
 - Ulepszona struktura kodu
 - Lepsza obsługa błędów
 - Zoptymalizowane profile wydajnościowe
 - Rozszerzone troubleshooting
-
+```
 #### Fixed
+```diff
 - Problemy z kompatybilnością Windows 11 24H2
 - Błędy w konfiguracji hibernacji
 - Issues z Memory Integrity
 - Edge cases w backupach
-
+```
 ## 📝 PORÓWNANIE v3.0 ULTRA VS v4.0 Profesjonal
 
 | Funkcja | v3.0 ULTRA | v4.0 Professional | Notatki |
@@ -90,11 +89,40 @@
 | **Raportowanie** | Brak | HTML/JSON/CSV | Eksport diagnostyki |
 
 ### v3.0 ULTRA Edition (2026-02-08)
+#### Added
+```diff
+- Production stage closed (No information)
+```
+#### Changed
+```diff
+- Production stage closed (No information)
+```
+#### Fixed
+```diff
 - Production stage closed (No information)
   
 ### v2.0 HIDEN Edition (2026-?-?)
+#### Added
+```diff
 - Production stage closed (No information)
-
+```
+#### Changed
+```diff
+- Production stage closed (No information)
+```
+#### Fixed
+```diff
+- Production stage closed (No information)
 ### v1.0 SECRET Edition (2026-?-?)
 #### Added
+```diff
 - Production stage closed (No information)
+```
+#### Changed
+```diff
+- Production stage closed (No information)
+```
+#### Fixed
+```diff
+- Production stage closed (No information)
+```
