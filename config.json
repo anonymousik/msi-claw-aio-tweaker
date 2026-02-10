@@ -1,0 +1,98 @@
+{
+  "version": "5.0.0",
+  "build_date": "2026-02-10",
+  "metadata": {
+    "author": "Anonymousik",
+    "organization": "SecFERRO DIVISION",
+    "license": "Educational Use Only"
+  },
+  "compatibility": {
+    "min_powershell_version": "5.1",
+    "supported_windows": ["Windows 11 22H2+", "Windows 10 21H2+"],
+    "supported_hardware": ["MSI Claw A1M", "MSI Claw 8 AI+", "Intel Arc Graphics"]
+  },
+  "security": {
+    "enforce_https": true,
+    "verify_sha256": true,
+    "verify_digital_signature": true,
+    "require_admin": true
+  },
+  "features": {
+    "auto_diagnostics": true,
+    "auto_repair": true,
+    "auto_update": true,
+    "backup_before_changes": true,
+    "telemetry_enabled": false
+  },
+  "optimization_profiles": {
+    "performance": {
+      "description": "Maksymalna wydajność (tylko na zasilaczu)",
+      "tdp": 28,
+      "target_fps": 100,
+      "battery_estimate_minutes": 60
+    },
+    "balanced": {
+      "description": "Zbalansowany (zalecany)",
+      "tdp": 17,
+      "target_fps": 90,
+      "battery_estimate_minutes": 120
+    },
+    "battery": {
+      "description": "Oszczędzanie baterii",
+      "tdp": 10,
+      "target_fps": 60,
+      "battery_estimate_minutes": 180
+    }
+  },
+  "recommended_versions": {
+    "bios": {
+      "minimum": 106,
+      "recommended": 109,
+      "critical_update_threshold": 106
+    },
+    "drivers": {
+      "intel_arc": {
+        "minimum": "31.0.101.5444",
+        "recommended": "32.0.101.6877"
+      },
+      "msi_center_m": {
+        "minimum": "1.0.2405.1401"
+      }
+    }
+  },
+  "module_hashes": {
+    "note": "SHA256 hashes for module integrity verification",
+    "Diagnostics.psm1": "",
+    "Utils.psm1": "",
+    "Optimization.psm1": "",
+    "Backup.psm1": ""
+  },
+  "update_server": {
+    "version_check_url": "https://raw.githubusercontent.com/anonymousik/msi-claw-aio-tweaker/main/version.json",
+    "download_base_url": "https://github.com/anonymousik/msi-claw-aio-tweaker/releases/latest/download",
+    "check_interval_hours": 24
+  },
+  "paths": {
+    "config_dir": "%APPDATA%\\MSI_Claw_Optimizer",
+    "log_dir": "%LOCALAPPDATA%\\MSI_Claw_Optimizer\\Logs",
+    "backup_dir": "%USERPROFILE%\\MSI_Claw_Backups",
+    "temp_dir": "%TEMP%\\MSI_Claw_Optimizer"
+  },
+  "limits": {
+    "max_backups": 10,
+    "log_retention_days": 30,
+    "max_log_size_mb": 50,
+    "max_cpu_frequency_percent": 100,
+    "min_cpu_frequency_percent": 5,
+    "temperature_threshold_celsius": 95,
+    "critical_temperature_celsius": 100
+  },
+  "windows_optimizations": {
+    "disable_memory_integrity": true,
+    "disable_virtual_machine_platform": true,
+    "disable_game_dvr": true,
+    "enable_hardware_gpu_scheduling": true,
+    "disable_telemetry": true,
+    "optimize_power_plan": true
+  }
+}
