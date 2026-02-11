@@ -3,786 +3,521 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UNӃNOWN ͡Ͳට ͡ANYONE | anonymousik.is-a.dev</title>
-  <meta name="description" content="Portfolio - Developer, MSI Claw Tweaker, Grafik, Montażysta, Twórca muzyki. Sprawdź projekty UNӃNOWN!">
-  <meta name="author" content="UNӃNOWN ͡Ͳ_ට ͡ANYONE | NƗӃටMƱ">
-  <meta name="theme-color" content="#16181c">
-  <meta name="keywords" content="MSI Claw, Tweaker, Optimization, FerroART, Grafik, Montażysta, YouTube, Muzyka, Portfolio">
+  <title>MSI CLAW TWEAKER | ANONYMOUSIK</title>
+  <meta name="description" content="MSI Claw Optimization Tool. Boost FPS, Remove Bloatware, Battery Life Extension. Remote Diagnostics via Termux.">
+  <meta name="theme-color" content="#0f1115">
   
-  <link rel="icon" type="image/png" href="assets/img/root/favicon.png">
-  
+  <!-- External Resources -->
   <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   
   <style>
-    /* Core Styles */
     :root {
-      --primary-color: #55c8ff;
-      --secondary-color: #7edbfa;
-      --accent-color: #ff5555; /* Dodatkowy kolor dla akcentów software */
-      --background-dark: #16181c;
-      --background-light: #23263b;
-      --background-lighter: #2f3452;
-      --text-primary: #e6e6e6;
-      --text-secondary: #b2c7e6;
+      --primary: #00f3ff;       /* Cyberpunk Cyan */
+      --secondary: #bd00ff;     /* Neon Purple */
+      --bg-dark: #050505;
+      --bg-panel: #0f1115;
+      --text-main: #ffffff;
+      --text-muted: #8892b0;
+      --success: #00ff9d;
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --font-code: 'JetBrains Mono', monospace;
+      --font-main: 'Inter', sans-serif;
     }
 
+    /* --- Base Styles --- */
     body {
-      font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
-      background: var(--background-dark);
-      color: var(--text-primary);
-      margin: 0;
-      min-height: 100vh;
-      scroll-behavior: smooth;
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 243, 255, 0.03) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(189, 0, 255, 0.03) 0%, transparent 20%);
+      color: var(--text-main);
+      font-family: var(--font-main);
       line-height: 1.6;
       overflow-x: hidden;
     }
-    
-    /* Container & Layout */
+
     .container {
-      width: 92%;
-      max-width: 1100px;
+      width: 90%;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1rem;
+    }
+
+    /* --- Glitch Effect for Title --- */
+    .glitch {
+      font-size: 3.5rem;
+      font-weight: 800;
+      position: relative;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: -2px;
     }
     
-    /* Header & Navigation */
-    header {
-      background: rgba(29, 33, 42, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 3px 24px rgba(0, 0, 0, 0.3);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(85, 200, 255, 0.1);
+    @media (max-width: 768px) { .glitch { font-size: 2.2rem; } }
+
+    .glitch::before, .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
     }
-    
+    .glitch::before {
+      left: 2px; text-shadow: -1px 0 #ff00c1; clip: rect(44px, 450px, 56px, 0);
+      animation: glitch-anim-1 5s infinite linear alternate-reverse;
+    }
+    .glitch::after {
+      left: -2px; text-shadow: -1px 0 #00fff9; clip: rect(44px, 450px, 56px, 0);
+      animation: glitch-anim-2 5s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitch-anim-1 {
+      0% { clip: rect(30px, 9999px, 10px, 0); }
+      5% { clip: rect(70px, 9999px, 90px, 0); }
+      100% { clip: rect(10px, 9999px, 30px, 0); }
+    }
+    @keyframes glitch-anim-2 {
+      0% { clip: rect(10px, 9999px, 80px, 0); }
+      5% { clip: rect(90px, 9999px, 10px, 0); }
+      100% { clip: rect(50px, 9999px, 20px, 0); }
+    }
+
+    /* --- Navigation --- */
     nav {
+      padding: 2rem 0;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 1rem 0;
-    }
-    
-    .brand {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--primary-color);
-      text-decoration: none;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      display: flex;
       align-items: center;
-      gap: 10px;
+      border-bottom: 1px solid var(--glass-border);
     }
-
-    .brand i {
-        font-size: 1.1rem;
-    }
+    .nav-brand { font-family: var(--font-code); font-weight: 700; color: var(--primary); }
     
-    .brand:hover {
-      color: var(--secondary-color);
-      text-shadow: 0 0 10px rgba(85, 200, 255, 0.4);
+    .status-badge {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(0, 255, 157, 0.1);
+      color: var(--success);
+      border: 1px solid rgba(0, 255, 157, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
-    
-    ul.navbar {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      margin: 0;
-      padding: 0;
-    }
-    
-    ul.navbar li a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      padding: 0.5em 0.8em;
-      border-radius: 6px;
-      position: relative;
-    }
-    
-    ul.navbar li a:hover,
-    ul.navbar li a.active {
-      color: #fff;
-      background: rgba(85, 200, 255, 0.15);
-    }
+    .status-dot { width: 6px; height: 6px; background: var(--success); border-radius: 50%; box-shadow: 0 0 8px var(--success); }
 
-    /* Section Styles */
-    section {
-      margin: 3rem 0;
-      background: var(--background-light);
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-      padding: 2.5rem 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.03);
+    /* --- Hero Section --- */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      min-height: 80vh;
     }
-    
-    .section-title {
-      color: var(--primary-color);
-      margin-bottom: 1em;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      font-size: 2.2rem;
-      text-align: center;
-      text-transform: uppercase;
-      position: relative;
-    }
-
-    .section-title::after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 4px;
-        background: var(--primary-color);
-        margin: 10px auto 0;
-        border-radius: 2px;
-    }
-    
-    /* Hero Section Styles */
-    .hero-banner {
-      position: relative;
-      width: 100%;
-      height: 280px;
-      margin-bottom: 3.5rem;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
-    }
-    
-    .hero-banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.7);
-    }
-    
-    .profile-avatar {
-      position: relative;
-      width: 160px;
-      height: 160px;
-      margin: -115px auto 20px auto;
-      border-radius: 50%;
-      border: 5px solid var(--background-light);
-      overflow: hidden;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.4);
-      background: var(--background-light);
-      z-index: 10;
-    }
-    
-    .profile-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    
-    .profile-avatar:hover img {
-      transform: scale(1.1);
-    }
-    
-    .hero-content {
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Software / MSI Tool Section - NEW PROFESSIONAL STYLE */
-    .software-showcase {
-        background: linear-gradient(145deg, #23263b 0%, #1e2130 100%);
-        border: 1px solid rgba(85, 200, 255, 0.15);
-        overflow: hidden;
-        position: relative;
-    }
-
-    .software-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 2rem;
-        flex-wrap: wrap;
-    }
-
-    .software-badge {
-        background: rgba(255, 85, 85, 0.15);
-        color: #ff7e7e;
-        padding: 5px 12px;
-        border-radius: 50px;
-        font-size: 0.8rem;
-        font-weight: 700;
-        border: 1px solid rgba(255, 85, 85, 0.3);
-        text-transform: uppercase;
-    }
-
-    .tool-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        align-items: start;
-    }
-
-    @media (max-width: 768px) {
-        .tool-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    .tool-info h3 {
-        font-size: 1.8rem;
-        color: #fff;
-        margin-bottom: 0.5rem;
-    }
-
-    .tool-subtitle {
-        color: var(--secondary-color);
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
-        display: block;
-    }
-
-    .feature-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 2rem 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 10px;
-    }
-
-    .feature-list li {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 10px 15px;
-        border-radius: 8px;
-        font-size: 0.9rem;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        border-left: 3px solid var(--primary-color);
-    }
-
-    .feature-list li i {
-        color: var(--primary-color);
-    }
-
-    .code-snippet {
-        background: #0f1115;
-        padding: 1.5rem;
-        border-radius: 10px;
-        font-family: 'Consolas', 'Monaco', monospace;
-        font-size: 0.85rem;
-        color: #a5b3ce;
-        border: 1px solid #333;
-        position: relative;
-        box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
-    }
-
-    .code-snippet::before {
-        content: 'PowerShell / CMD';
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: #333;
-        color: #fff;
-        padding: 2px 10px;
-        font-size: 0.7rem;
-        border-bottom-left-radius: 8px;
-    }
-
-    .action-buttons {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-    }
+    @media (max-width: 960px) { .hero { grid-template-columns: 1fr; text-align: center; gap: 2rem; } }
 
     .btn {
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 700;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .btn:hover {
-        transform: translateY(-2px);
-    }
-
-    .btn-primary {
-        background: var(--primary-color);
-        color: #000;
-        box-shadow: 0 4px 15px rgba(85, 200, 255, 0.3);
-    }
-
-    .btn-outline {
-        border: 2px solid var(--text-secondary);
-        color: var(--text-secondary);
-    }
-
-    .btn-outline:hover {
-        border-color: #fff;
-        color: #fff;
-        background: rgba(255,255,255,0.05);
-    }
-
-    /* Channel Description Styles */
-    .channel-description {
-      margin: 2rem auto;
-      max-width: 800px;
-      text-align: center;
-      background: var(--background-lighter);
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
-    }
-
-    .greeting {
-      font-size: 1.2rem;
-      color: var(--secondary-color);
-      margin-bottom: 1.5rem;
-    }
-
-    .features ul {
-        list-style: none;
-        padding: 0;
-    }
-    
-    .features li {
-        margin: 10px 0;
-        font-size: 1.1rem;
-    }
-
-    /* Social Links */
-    .social-links {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .social-links a {
-        color: var(--text-secondary);
-        font-size: 1.8rem;
-        transition: color 0.2s, transform 0.2s;
-    }
-
-    .social-links a:hover {
-        color: var(--primary-color);
-        transform: scale(1.2);
-    }
-
-    /* YouTube Stats */
-    .youtube-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-      margin: 2rem 0;
-    }
-
-    .stat-box {
-      background: var(--background-lighter);
-      padding: 1.5rem;
-      border-radius: 12px;
-      text-align: center;
-      min-width: 160px;
-      flex: 1;
-      border: 1px solid rgba(255,255,255,0.05);
-      transition: transform 0.3s ease, border-color 0.3s;
-    }
-
-    .stat-box:hover {
-      transform: translateY(-5px);
-      border-color: var(--primary-color);
-    }
-
-    .stat-icon {
-      font-size: 2rem;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-value {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #fff;
-      margin: 0.5rem 0;
-      display: block;
-    }
-
-    .stat-label {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      background: var(--primary);
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: 0.3s;
       text-transform: uppercase;
       letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-code);
     }
-
-    /* Playlist Section Styles */
-    .playlist-section {
-      margin-top: 4rem;
+    .btn:hover {
+      box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+      transform: translateY(-2px);
     }
-
-    .playlist-container {
-      background: var(--background-lighter);
-      padding: 2rem;
-      border-radius: 12px;
-      margin-top: 1.5rem;
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--glass-border);
+      color: var(--text-main);
     }
+    .btn-outline:hover { border-color: var(--secondary); color: var(--secondary); box-shadow: 0 0 20px rgba(189, 0, 255, 0.2); }
 
-    .playlist-embed {
-      margin: 1.5rem 0;
+    /* --- Terminal UI --- */
+    .terminal-window {
+      background: rgba(15, 17, 21, 0.95);
       border-radius: 8px;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
       overflow: hidden;
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      font-family: var(--font-code);
+      text-align: left;
     }
-
-    .playlist-embed iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    .terminal-header {
+      background: #1c1f26;
+      padding: 10px 15px;
+      display: flex;
+      gap: 8px;
     }
-
-    .highlight-box {
-        background: rgba(85, 200, 255, 0.05);
-        border: 1px solid rgba(85, 200, 255, 0.2);
-        padding: 15px;
-        margin: 20px 0;
-        border-radius: 8px;
-        text-align: center;
-    }
+    .circle { width: 12px; height: 12px; border-radius: 50%; }
+    .c-red { background: #ff5f56; } .c-yel { background: #ffbd2e; } .c-grn { background: #27c93f; }
     
-    .highlight-box h4 {
-        color: var(--primary-color);
-        margin: 0 0 10px 0;
-    }
-
-    /* Tags and Credits */
-    .tags {
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-top: 2rem;
-      opacity: 0.7;
-      text-align: justify;
-    }
-
-    .credits {
-      text-align: center;
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      color: var(--text-secondary);
+    .terminal-content {
+      padding: 20px;
       font-size: 0.9rem;
+      color: #a9b7c6;
+    }
+    .cmd-prompt { color: var(--success); }
+    .cmd-input { color: #fff; }
+    .cursor { display: inline-block; width: 8px; height: 16px; background: var(--primary); animation: blink 1s infinite; vertical-align: middle; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    .copy-box {
+      background: #000;
+      border: 1px solid var(--glass-border);
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .code-string { color: var(--secondary); word-break: break-all; font-size: 0.85rem; }
+
+    /* --- Stats Grid --- */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 2rem;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.03);
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid var(--glass-border);
+      text-align: center;
+    }
+    .stat-val { font-size: 1.5rem; font-weight: 700; color: #fff; display: block; }
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
+
+    /* --- Termux Section (The Innovation) --- */
+    .termux-section {
+      margin: 6rem 0;
+      background: linear-gradient(145deg, rgba(20,20,25,0.8), rgba(10,10,12,0.95));
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .termux-section::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
     }
 
-    /* Contact Grid */
-    .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
+    .config-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) { .config-grid { grid-template-columns: 1fr; } }
+
+    .input-group { margin-bottom: 1rem; }
+    .input-group label { display: block; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 5px; }
+    .input-dark {
+      width: 100%;
+      background: #050505;
+      border: 1px solid #333;
+      padding: 10px;
+      color: #fff;
+      font-family: var(--font-code);
+      border-radius: 4px;
+    }
+    .input-dark:focus { border-color: var(--primary); outline: none; }
+
+    .generated-code {
+      background: #000;
+      padding: 15px;
+      border-radius: 6px;
+      font-family: var(--font-code);
+      font-size: 0.8rem;
+      color: var(--success);
+      height: 100%;
+      white-space: pre-wrap;
+      border: 1px solid #333;
+      position: relative;
     }
 
-    .contact-card {
-        background: var(--background-lighter);
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
+    /* Accordion for Help */
+    details {
+      margin-top: 1rem;
+      background: rgba(255,255,255,0.03);
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
     }
-    
-    .contact-card:hover {
-        background: #363b58;
-    }
-    
-    .contact-card a {
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: bold;
-    }
+    summary { color: var(--primary); font-weight: 600; list-style: none; display: flex; align-items: center; gap: 10px; }
+    summary::after { content: '▼'; font-size: 0.7rem; margin-left: auto; }
+    details[open] summary::after { content: '▲'; }
+    .help-content { margin-top: 10px; font-size: 0.9rem; color: #ccc; padding-left: 10px; border-left: 2px solid var(--text-muted); }
 
-    /* Footer */
-    footer {
-        background: #0f1115;
-        padding: 3rem 0;
-        text-align: center;
-        color: #777;
-        font-size: 0.9rem;
-        border-top: 1px solid #222;
-    }
-    
-    .footer-badges span {
-        display: inline-block;
-        background: #222;
-        padding: 4px 10px;
-        border-radius: 4px;
-        margin: 0 5px;
-        font-size: 0.8rem;
-    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <a class="brand" href="#hero">
-            <i class="fas fa-terminal"></i> ANONYMOUSIK
-        </a>
-        <ul class="navbar">
-          <li><a href="#hero" class="active">Start</a></li>
-          <li><a href="#software">Software</a></li>
-          <li><a href="#youtube">YouTube</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
+
+  <header class="container">
+    <nav>
+      <div class="nav-brand">
+        <i class="fas fa-terminal"></i> ANONYMOUSIK <span style="color:var(--text-muted)">// DEV</span>
+      </div>
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span id="api-status">API: CONNECTING...</span>
+      </div>
+    </nav>
   </header>
 
   <main class="container">
-    <section id="hero" data-aos="fade-up">
-      <div class="hero-banner">
-        <img src="https://styles.redditmedia.com/t5_5o8xa1/styles/profileBanner_4u92i6dtc2ig1.jpg?width=1280&height=384&frame=1&auto=webp&crop=1280:384,smart&s=ce9856c301530a5dfa2e337161bb103f17a82dd0" 
-             alt="Banner" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop'">
-      </div>
-      
+    
+    <!-- HERO SECTION -->
+    <section class="hero" data-aos="fade-up">
       <div class="hero-content">
-        <div class="profile-avatar">
-          <img src="https://styles.redditmedia.com/t5_5o8xa1/styles/profileIcon_7q2d2tgjwv0e1.jpg?s=34f8515960ace225e1781c037c88ca317a2011e0" 
-               alt="Avatar" onerror="this.src='https://ui-avatars.com/api/?name=Unknown&background=0D8ABC&color=fff&size=256'">
-        </div>
-        
-        <h1 class="section-title" style="margin-bottom: 0.2em;">
-          UNӃNOWN ͡Ͳ_ට ͡ANYONE
-        </h1>
-        <div style="color: var(--primary-color); margin-bottom: 20px; font-weight: 600;">| NƗӃටMƱ | DEVELOPER | CREATOR |</div>
+        <div style="color: var(--primary); font-family: var(--font-code); margin-bottom: 10px;">> ./init_optimization.sh</div>
+        <h1 class="glitch" data-text="MSI CLAW AIO TWEAKER">MSI CLAW<br>AIO TWEAKER</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin: 1.5rem 0;">
+          Zaawansowana automatyzacja dla Twojej konsoli. Zwiększ FPS, usuń telemetrię i zyskaj pełną kontrolę nad sprzętem. 
+        </p>
 
-        <div class="channel-description">
-          <p class="greeting">
-            Witaj w moim cyfrowym świecie. <br>
-            Łączę kodowanie, optymalizację sprzętu i twórczość artystyczną.
-          </p>
-
-          <div class="features">
-            <ul>
-              <li><i class="fas fa-microchip" style="color:var(--primary-color)"></i> <strong>MSI Claw Optimization</strong> - Custom Tweaks</li>
-              <li><i class="fas fa-music" style="color:var(--primary-color)"></i> <strong>FerroART</strong> - Remixy i produkcja muzyczna</li>
-              <li><i class="fab fa-youtube" style="color:var(--primary-color)"></i> <strong>Content Creator</strong> - Video & Graphics</li>
-            </ul>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <i class="fas fa-star" style="color: gold; margin-bottom:5px;"></i>
+            <span class="stat-val" id="star-count">--</span>
+            <span class="stat-label">Gwiazdki</span>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-code-branch" style="color: var(--secondary); margin-bottom:5px;"></i>
+            <span class="stat-val" id="fork-count">--</span>
+            <span class="stat-label">Forki</span>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-history" style="color: var(--primary); margin-bottom:5px;"></i>
+            <span class="stat-val" id="last-update">--</span>
+            <span class="stat-label">Aktualizacja</span>
           </div>
         </div>
 
-        <div class="social-links">
-          <a href="https://github.com/anonymousik" target="_blank" title="GitHub">
-            <i class="fab fa-github"></i>
+        <div style="margin-top: 2rem; display: flex; gap: 15px; flex-wrap: wrap;">
+          <a href="https://github.com/anonymousik/MSI_CLAW-AIO-Tweaker-" class="btn">
+            <i class="fab fa-github"></i> Repozytorium
           </a>
-          <a href="https://youtube.com/@FerroART" target="_blank" title="YouTube">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="mailto:nieznanynikomuu@gmail.com" title="E-mail">
-            <i class="fa-solid fa-envelope"></i>
+          <a href="#termux" class="btn btn-outline">
+            <i class="fas fa-mobile-alt"></i> Mobile Diag
           </a>
         </div>
       </div>
-    </section>
 
-    <section id="software" class="software-showcase" data-aos="fade-up">
-        <div class="software-header">
-            <h2 class="section-title" style="margin:0;">Projekty</h2>
-            <span class="software-badge">Latest Release</span>
+      <!-- Live Terminal Animation -->
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="circle c-red"></div>
+          <div class="circle c-yel"></div>
+          <div class="circle c-grn"></div>
+          <span style="color: #666; font-size: 0.8rem; margin-left: auto;">PowerShell 7.4 (Admin)</span>
         </div>
-
-        <div class="tool-grid">
-            <div class="tool-info">
-                <h3>MSI CLAW AIO TWEAKER</h3>
-                <span class="tool-subtitle">Odblokuj pełny potencjał swojej konsoli</span>
-                
-                <p style="color: #ccc; margin-bottom: 1.5rem;">
-                    Zaawansowane narzędzie typu All-In-One stworzone specjalnie dla konsoli MSI Claw. 
-                    Skrypt automatyzuje proces optymalizacji systemu Windows, usuwa zbędne oprogramowanie (debloat) 
-                    i poprawia wydajność w grach.
-                </p>
-
-                <ul class="feature-list">
-                    <li><i class="fas fa-bolt"></i> Boost FPS & Performance</li>
-                    <li><i class="fas fa-trash-alt"></i> Windows Debloater</li>
-                    <li><i class="fas fa-battery-full"></i> Optymalizacja Baterii</li>
-                    <li><i class="fas fa-shield-alt"></i> Telemetry Remover</li>
-                    <li><i class="fas fa-tools"></i> Narzędzia Naprawcze</li>
-                    <li><i class="fas fa-download"></i> Instalator Sterowników</li>
-                </ul>
-
-                <div class="action-buttons">
-                    <a href="https://github.com/anonymousik/MSI_CLAW-AIO-Tweaker-" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github"></i> Zobacz na GitHub
-                    </a>
-                    <a href="https://github.com/anonymousik/MSI_CLAW-AIO-Tweaker-/releases" target="_blank" class="btn btn-outline">
-                        <i class="fas fa-download"></i> Pobierz
-                    </a>
-                </div>
-            </div>
-
-            <div class="tool-preview">
-                <div class="code-snippet">
-                    <div style="color: #55c8ff; margin-bottom: 10px;"># Instalacja / Uruchomienie:</div>
-                    <div style="margin-bottom: 10px;">
-                        <span style="color: #c678dd;">irm</span> <span style="color: #98c379;">"https://github.com/anonymousik/..."</span> | <span style="color: #c678dd;">iex</span>
-                    </div>
-                    <div style="color: #777; margin-top: 20px;">
-                        // Skrypt automatycznie wykrywa konfigurację<br>
-                        // i stosuje bezpieczne ustawienia.<br>
-                        [+] System Optimized<br>
-                        [+] Bloatware Removed<br>
-                        [+] MSI Services Tweaked<br>
-                        <span style="color: #98c379;">Done! Enjoy your gaming.</span><br>
-                        <span class="blink">_</span>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-top: 15px; font-size: 0.8rem; color: #666;">
-                    <i class="fas fa-code-branch"></i> Open Source | <i class="fas fa-check-circle"></i> Safe to use
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="youtube" data-aos="fade-up">
-      <h2 class="section-title">YouTube: FerroART</h2>
-      
-      <div class="youtube-stats">
-        <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
-          <div class="stat-icon"><i class="fas fa-users"></i></div>
-          <span class="stat-value" id="subscribers-count">1200</span>
-          <div class="stat-label">Subskrypcji</div>
-        </div>
-        <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
-          <div class="stat-icon"><i class="fas fa-eye"></i></div>
-          <span class="stat-value" id="views-count">50000</span>
-          <div class="stat-label">Wyświetleń</div>
-        </div>
-        <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
-          <div class="stat-icon"><i class="fas fa-thumbs-up"></i></div>
-          <span class="stat-value" id="likes-count">3500</span>
-          <div class="stat-label">Polubień</div>
-        </div>
-      </div>
-
-      <div class="playlist-section">
-        <div class="highlight-box">
-          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">N O W Y  W Y M I A R  M U Z Y K I 🎶</h3>
-          <p style="color: var(--secondary-color);">F E R R O  A R T - S E Z O N 2</p>
-        </div>
-
-        <div class="playlist-container">
-            <p style="text-align: center; margin-bottom: 2rem;">
-              Zanurz się w muzycznej podróży z FerroART!<br>
-              Sezon 2 to nowa opowieść pełna emocji i pasji!
-            </p>
-
-            <div class="playlist-embed">
-              <iframe 
-                src="https://www.youtube.com/embed/videoseries?list=PL-_QU3AeEjaF5KYV7uobJWH1QRW3ViSTE" 
-                title="FerroART - Animacje Muzyczne" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-              </iframe>
-            </div>
-
-            <div class="credits">
-              <p>C R E A T E D  B Y</p>
-              <p>N ɨ ɛ ʐ ռ ǟ ռ ʏ 🅽 ɨ ӄ օ ʍ ʊ</p>
-              <p>F e r r o A R T ® 2024-2026</p>
-            </div>
-
-            <div class="tags">
-              #FerroARTSezon2 #MSIClaw #Tweaker #Optimization #RisenToSuccess #Cytaty #Filipek #Peja 
-              #PolskiRap #Muzyka2026 #Electronic2026 #Coding #PowerShell #Dev
-            </div>
+        <div class="terminal-content">
+          <div><span class="cmd-prompt">PS C:\Users\Claw></span> <span id="typewriter"></span><span class="cursor"></span></div>
+          <div id="terminal-output" style="display:none; margin-top: 10px;">
+            <div style="color: var(--success)">[OK] Fetching repository...</div>
+            <div style="color: var(--success)">[OK] Verifying hash integrity...</div>
+            <div style="color: var(--primary)">[+] MSI Claw A1M Detected</div>
+            <div style="color: #fff; margin-top: 15px;">Aby zainstalować, skopiuj komendę:</div>
+          </div>
+          
+          <div class="copy-box">
+            <span class="code-string" id="install-cmd">irm "https://github.com/anonymousik/MSI_CLAW-AIO-Tweaker-" | iex</span>
+            <button class="btn-outline" style="padding: 5px 10px; font-size: 0.8rem;" onclick="copyToClipboard('install-cmd')">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" data-aos="fade-up">
-      <h2 class="section-title">Kontakt</h2>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px;"><i class="fa-solid fa-envelope"></i></div>
-          <h3>Email</h3>
-          <p><a href="mailto:nieznanynikomuu@gmail.com">nieznanynikomuu@gmail.com</a></p>
+    <!-- INNOVATION: TERMUX BRIDGE -->
+    <section id="termux" class="termux-section" data-aos="fade-up">
+      <h2 style="font-size: 2rem; margin-bottom: 0.5rem;"><i class="fab fa-android"></i> Termux <i class="fas fa-exchange-alt"></i> Windows</h2>
+      <p style="color: var(--text-muted);">
+        Użyj swojego telefonu z systemem Android jako <strong>zewnętrznego monitora diagnostycznego</strong>. 
+        Poniższy generator stworzy bezpieczny skrypt Bash, który połączy się z Twoim MSI Claw przez SSH i pobierze dane telemetryczne (Bateria, Temp, RAM) w czasie rzeczywistym.
+      </p>
+
+      <div class="config-grid">
+        <!-- Configuration Side -->
+        <div>
+          <h4 style="color: var(--primary); margin-bottom: 1rem;">1. Konfiguracja Połączenia</h4>
+          <div class="input-group">
+            <label>Adres IP MSI Claw (Lokalny):</label>
+            <input type="text" id="target-ip" class="input-dark" placeholder="np. 192.168.1.15" onkeyup="generateScript()">
+          </div>
+          <div class="input-group">
+            <label>Nazwa Użytkownika Windows:</label>
+            <input type="text" id="target-user" class="input-dark" placeholder="np. Admin" onkeyup="generateScript()">
+          </div>
+
+          <details>
+            <summary>Jak skonfigurować Windows (Wymagane)</summary>
+            <div class="help-content">
+              1. Otwórz <strong>Ustawienia -> Aplikacje -> Funkcje Opcjonalne</strong>.<br>
+              2. Zainstaluj <strong>Serwer OpenSSH</strong>.<br>
+              3. Otwórz Usługi (services.msc) i ustaw "OpenSSH SSH Server" na <strong>Automatyczny</strong> i uruchom go.<br>
+              4. Sprawdź IP wpisując <code>ipconfig</code> w CMD.
+            </div>
+          </details>
+          
+          <details>
+            <summary>Wymagania Termux (Android)</summary>
+            <div class="help-content">
+              1. Pobierz Termux (F-Droid lub GitHub).<br>
+              2. Wpisz: <code>pkg update && pkg install openssh</code>
+            </div>
+          </details>
         </div>
-        <div class="contact-card">
-          <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px;"><i class="fab fa-github"></i></div>
-          <h3>GitHub</h3>
-          <p><a href="https://github.com/anonymousik" target="_blank">@anonymousik</a></p>
-        </div>
-        <div class="contact-card">
-          <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px;"><i class="fab fa-youtube"></i></div>
-          <h3>YouTube</h3>
-          <p><a href="https://youtube.com/@FerroART" target="_blank">@FerroART</a></p>
+
+        <!-- Code Side -->
+        <div>
+          <h4 style="color: var(--success); margin-bottom: 1rem;">2. Twój Skrypt Diagnostyczny</h4>
+          <div class="generated-code" id="bash-script">
+# Wpisz dane po lewej aby wygenerować kod...
+          </div>
+          <button class="btn" style="width: 100%; margin-top: 10px;" onclick="copyToClipboard('bash-script')">
+            <i class="fas fa-copy"></i> Kopiuj do schowka
+          </button>
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="brand" style="justify-content: center; margin-bottom: 1rem;">anonymousik.is-a.dev</div>
-      <div class="footer-badges">
-        <span>Developer</span>
-        <span>Grafik</span>
-        <span>Montażysta</span>
-        <span>Twórca muzyki</span>
-      </div>
-      <div style="margin: 1.5rem 0;">
-        NƗӃටMƱ ͜ ͜ 🅽ɨɛʐռǟռʏ · Ƒҽɾɾට ͜ ȺའT ͜
-      </div>
-      <div style="font-size: 0.8em; opacity: 0.5;">
-        © 2026 UNӃNOWN ͡Ͳ_ට ͡ANYONE. All rights reserved.
-      </div>
-    </div>
+  <footer style="border-top: 1px solid #222; margin-top: 4rem; padding: 2rem; text-align: center; color: #555;">
+    <p>Projekt Open Source | &copy; 2025 ANONYMOUSIK</p>
   </footer>
 
+  <!-- SCRIPTS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.js"></script>
-  
   <script>
-    // Initialize AOS
-    AOS.init({
-      once: true,
-      duration: 800,
-      offset: 100
-    });
+    AOS.init({ once: true, offset: 50 });
 
-    // Initialize counters
+    // --- 1. Dynamic GitHub Stats with Caching (Prevents API Limits) ---
+    const REPO_OWNER = 'anonymousik';
+    const REPO_NAME = 'MSI_CLAW-AIO-Tweaker-';
+    const CACHE_KEY = 'github_stats_cache';
+    const CACHE_DURATION = 3600000; // 1 godzina w ms
+
+    async function fetchGitHubStats() {
+      const now = Date.now();
+      const cached = JSON.parse(localStorage.getItem(CACHE_KEY));
+
+      // Use Cache if valid
+      if (cached && (now - cached.timestamp < CACHE_DURATION)) {
+        updateUI(cached.data);
+        document.getElementById('api-status').innerHTML = '<span class="status-dot"></span> API: CACHED';
+        return;
+      }
+
+      // Fetch Live
+      try {
+        const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`);
+        if (!res.ok) throw new Error('Repo not found');
+        const data = await res.json();
+
+        const stats = {
+          stars: data.stargazers_count,
+          forks: data.forks_count,
+          updated: new Date(data.pushed_at).toLocaleDateString('pl-PL')
+        };
+
+        // Save to Cache
+        localStorage.setItem(CACHE_KEY, JSON.stringify({ timestamp: now, data: stats }));
+        updateUI(stats);
+        document.getElementById('api-status').innerHTML = '<span class="status-dot"></span> API: LIVE';
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById('api-status').innerText = 'API: OFFLINE';
+        document.getElementById('api-status').style.color = 'red';
+      }
+    }
+
+    function updateUI(stats) {
+      document.getElementById('star-count').innerText = stats.stars;
+      document.getElementById('fork-count').innerText = stats.forks;
+      document.getElementById('last-update').innerText = stats.updated;
+    }
+
+    // --- 2. Typewriter Effect for Hero Terminal ---
+    function startTypewriter() {
+      const text = "irm https://github.com/... | iex";
+      const el = document.getElementById('typewriter');
+      let i = 0;
+      
+      const interval = setInterval(() => {
+        el.textContent += text.charAt(i);
+        i++;
+        if (i >= text.length) {
+          clearInterval(interval);
+          setTimeout(() => {
+            document.getElementById('terminal-output').style.display = 'block';
+          }, 500);
+        }
+      }, 50);
+    }
+
+    // --- 3. Dynamic Termux Script Generator ---
+    function generateScript() {
+      const ip = document.getElementById('target-ip').value || '192.168.X.X';
+      const user = document.getElementById('target-user').value || 'User';
+
+      const script = `#!/bin/bash
+# MSI Claw Remote Monitor
+# Wklej to w Termux
+
+TARGET_IP="${ip}"
+USER="${user}"
+
+echo "Lacznie z $USER@$TARGET_IP..."
+
+ssh -t $USER@$TARGET_IP "powershell -NoProfile -Command \\"
+    Clear-Host;
+    Write-Host '--- MSI CLAW DIAGNOSTICS ---' -ForegroundColor Cyan;
+    Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object FreePhysicalMemory;
+    Get-CimInstance -ClassName Win32_Battery | Select-Object EstimatedChargeRemaining, BatteryStatus;
+    Write-Host 'CPU Load:' -NoNewline;
+    (Get-WmiObject win32_processor | Measure-Object -Property LoadPercentage -Average).Average;
+\\""`;
+
+      document.getElementById('bash-script').innerText = script;
+    }
+
+    // --- 4. Universal Copy Function ---
+    function copyToClipboard(elementId) {
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Skopiowano do schowka!");
+      }).catch(err => {
+        console.error('Błąd kopiowania:', err);
+      });
+    }
+
+    // Init
     document.addEventListener('DOMContentLoaded', () => {
-      // Sprawdzamy czy elementy istnieją zanim uruchomimy licznik
-      const subs = document.getElementById('subscribers-count');
-      const views = document.getElementById('views-count');
-      const likes = document.getElementById('likes-count');
-
-      const options = {
-        duration: 3,
-        useEasing: true,
-        useGrouping: true,
-      };
-
-      if(subs) new countUp.CountUp('subscribers-count', 1200, options).start();
-      if(views) new countUp.CountUp('views-count', 50000, options).start();
-      if(likes) new countUp.CountUp('likes-count', 3500, options).start();
+      fetchGitHubStats();
+      setTimeout(startTypewriter, 1000);
+      generateScript(); // Init default script
     });
+
   </script>
 </body>
 </html>
-
-
 
