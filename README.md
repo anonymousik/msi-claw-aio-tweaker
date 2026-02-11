@@ -16,7 +16,8 @@
 [📖 Dokumentacja](INSTALLATION.md) •
 [🐛 Report Bug](https://github.com/anonymousik/msi-claw-aio-tweaker/issues) •
 [💡 Request Feature](https://github.com/anonymousik/msi-claw-aio-tweaker/issues)
-
+[🐣 DEMO_CLAW MOBILE MONITOR]
+(https://anonymousik.is-a.dev/msi-claw-aio-tweaker/mobile_demo) •
 </div>
 
 ---
