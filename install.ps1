@@ -26,7 +26,7 @@ $ErrorActionPreference = 'Stop'
 $Config = @{
     Version = '5.0.0'
     ReleaseURL = 'https://github.com/anonymousik/msi-claw-aio-tweaker/releases/latest/download'
-    VersionCheckURL = 'https://raw.githubusercontent.com/anonymousik/MSI-Claw-Optimizer/main/version.json'
+    VersionCheckURL = 'https://raw.githubusercontent.com/anonymousik/msi-claw-aio-tweaker/main/version.json'
     ZipFileName = 'MSI_Claw_Optimizer_v5.0.zip'
     TempDir = Join-Path $env:TEMP 'MSI_Claw_Installer'
 }
