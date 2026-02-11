@@ -1,210 +1,413 @@
 # Contributing to MSI Claw AIO Tweaker
 
-First off, thank you for considering contributing to MSI Claw AIO Tweaker! 🎉
+Thank you for your interest in contributing to MSI Claw AIO Tweaker! This document provides guidelines and instructions for contributing to the project.
 
-It's people like you that make this tool better for the entire MSI Claw community.
-
----
-
-## 📋 Table of Contents
-
-- [Code of Conduct](#code-of-conduct)
-- [How Can I Contribute?](#how-can-i-contribute)
-  - [Reporting Bugs](#reporting-bugs)
-  - [Suggesting Features](#suggesting-features)
-  - [Code Contributions](#code-contributions)
-  - [Documentation](#documentation)
-  - [Testing](#testing)
-- [Development Setup](#development-setup)
-- [Coding Standards](#coding-standards)
-- [Pull Request Process](#pull-request-process)
-- [Community](#community)
+**Repository:** https://anonymousik.is-a.dev/msi-claw-aio-tweaker  
+**GitHub:** https://github.com/anonymousik/msi-claw-aio-tweaker  
+**Maintainer:** Anonymousik (SecFERRO Division)
 
 ---
 
-## 📜 Code of Conduct
+## Table of Contents
+
+1. [Code of Conduct](#code-of-conduct)
+2. [How Can I Contribute?](#how-can-i-contribute)
+3. [Development Setup](#development-setup)
+4. [Coding Standards](#coding-standards)
+5. [Pull Request Process](#pull-request-process)
+6. [Testing Guidelines](#testing-guidelines)
+7. [Documentation Guidelines](#documentation-guidelines)
+8. [Security Guidelines](#security-guidelines)
+9. [Community](#community)
+
+---
+
+## Code of Conduct
 
 ### Our Pledge
 
-We are committed to providing a welcoming and inspiring community for all.
+We are committed to providing a welcoming and inclusive environment for all contributors, regardless of experience level, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or nationality.
 
 ### Our Standards
 
-**Positive behavior includes:**
-- Using welcoming and inclusive language
-- Being respectful of differing viewpoints
-- Gracefully accepting constructive criticism
-- Focusing on what is best for the community
-- Showing empathy towards other community members
+**Examples of behavior that contributes to a positive environment:**
 
-**Unacceptable behavior includes:**
-- Trolling, insulting/derogatory comments, and personal or political attacks
-- Public or private harassment
-- Publishing others' private information without permission
-- Other conduct which could reasonably be considered inappropriate
+✅ Using welcoming and inclusive language  
+✅ Being respectful of differing viewpoints and experiences  
+✅ Gracefully accepting constructive criticism  
+✅ Focusing on what is best for the community  
+✅ Showing empathy towards other community members  
+
+**Examples of unacceptable behavior:**
+
+❌ Trolling, insulting/derogatory comments, and personal or political attacks  
+❌ Public or private harassment  
+❌ Publishing others' private information without permission  
+❌ Other conduct which could reasonably be considered inappropriate  
 
 ### Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to:
-- **GitHub Issues**: https://anonymousik.is-a.dev/msi-claw-aio-tweaker/issues
-- **Reddit**: r/MSIClaw moderation team
-- **Direct Contact**: [Report via GitHub Discussions](https://anonymousik.is-a.dev/msi-claw-aio-tweaker/discussions)
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project maintainer. All complaints will be reviewed and investigated promptly and fairly.
 
 ---
 
-## 🤝 How Can I Contribute?
+## How Can I Contribute?
 
-### Reporting Bugs
+### 1. Reporting Bugs
 
-**Before submitting a bug report:**
-1. Check the [existing issues](https://anonymousik.is-a.dev/msi-claw-aio-tweaker/issues)
-2. Check the [troubleshooting guide](INSTALLATION.md#troubleshooting)
-3. Ensure you're using the latest version
+**Before Submitting a Bug Report:**
 
-**When submitting a bug report, include:**
+- Check the [existing issues](https://github.com/anonymousik/msi-claw-aio-tweaker/issues) to avoid duplicates
+- Ensure you're using the latest version
+- Try to reproduce the bug on a clean Windows installation if possible
+
+**How to Submit a Good Bug Report:**
+
+Include the following information:
 
 ```markdown
-**System Information:**
-- MSI Claw Model: [A1M 135H / A1M 155H / 8 AI+ Lunar Lake]
-- Windows Version: [Windows 11 24H2]
-- BIOS Version: [E1T41IMS.109]
-- Intel Arc Driver: [32.0.101.6877]
-- Script Version: [5.0.0]
+**Bug Description**
+A clear and concise description of what the bug is.
 
-**Description:**
-A clear and concise description of the bug.
-
-**Steps to Reproduce:**
-1. Go to '...'
-2. Click on '...'
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Run command '...'
+2. Select option '...'
 3. See error
 
-**Expected Behavior:**
+**Expected Behavior**
 What you expected to happen.
 
-**Actual Behavior:**
+**Actual Behavior**
 What actually happened.
 
-**Logs:**
-Attach logs from:
-- `%LOCALAPPDATA%\MSI_Claw_Optimizer\Logs\`
-- Screenshots of error messages
+**System Information**
+- MSI Claw Model: [e.g., A1M, 8 AI+]
+- CPU: [e.g., Core Ultra 7 155H]
+- OS: [e.g., Windows 11 23H2 Build 22631.3007]
+- BIOS Version: [e.g., E1T41IMS.109]
+- Script Version: [e.g., 5.0.0]
 
-**Additional Context:**
-Any other information that might be helpful.
+**Logs**
+Attach relevant log files from:
+- `%USERPROFILE%\MSI_Claw_Logs\optimizer.log`
+- `%USERPROFILE%\MSI_Claw_Logs\audit.log`
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Additional Context**
+Any other information about the problem.
 ```
 
-**Bug Report Template**: Use the [Bug Report template](https://anonymousik.is-a.dev/msi-claw-aio-tweaker/issues/new?template=bug_report.md)
+### 2. Suggesting Enhancements
 
----
+**Before Submitting an Enhancement:**
 
-### Suggesting Features
+- Check if the feature already exists
+- Check the [roadmap](CHANGELOG.md#upcoming-releases) for planned features
+- Search existing issues for similar suggestions
 
-**Before suggesting a feature:**
-1. Check if it's already in the [roadmap](README.md#roadmap)
-2. Search [existing feature requests](https://anonymousik.is-a.dev/msi-claw-aio-tweaker/issues?q=is%3Aissue+label%3Aenhancement)
-
-**When suggesting a feature, include:**
+**How to Submit a Good Enhancement Suggestion:**
 
 ```markdown
-**Problem Statement:**
-Describe the problem this feature would solve.
+**Feature Description**
+A clear and concise description of the enhancement.
 
-**Proposed Solution:**
-Describe your proposed solution.
+**Problem Statement**
+What problem does this solve? What use case does it address?
 
-**Alternatives Considered:**
-What alternative solutions have you considered?
+**Proposed Solution**
+How should this work? What should the user experience be?
 
-**Use Cases:**
-Describe specific use cases.
+**Alternatives Considered**
+What other solutions have you considered?
 
-**Priority:**
-How important is this feature to you?
-- [ ] Critical (can't use tool without it)
-- [ ] High (would significantly improve experience)
-- [ ] Medium (nice to have)
-- [ ] Low (minor improvement)
+**Implementation Details** (optional)
+Technical details about how this could be implemented.
 
-**Affected Users:**
-Who would benefit from this feature?
+**Additional Context**
+Any other information, mockups, or examples.
 ```
 
-**Feature Request Template**: Use the [Feature Request template](https://anonymousik.is-a.dev/msi-claw-aio-tweaker/issues/new?template=feature_request.md)
+### 3. Contributing Code
+
+We welcome code contributions! Here's how to get started:
+
+#### **Types of Contributions:**
+
+- 🐛 **Bug Fixes** - Fix reported issues
+- ✨ **New Features** - Implement enhancements from the roadmap
+- 📚 **Documentation** - Improve docs, add examples, fix typos
+- 🧪 **Tests** - Add or improve test coverage
+- 🔒 **Security** - Address security vulnerabilities
+- ♻️ **Refactoring** - Improve code quality without changing behavior
 
 ---
 
-### Code Contributions
+## Development Setup
 
-We welcome code contributions! Here's how:
+### Prerequisites
 
-#### 1. Fork and Clone
+**Required:**
+- Windows 10 20H1+ or Windows 11
+- PowerShell 5.1+ (check: `$PSVersionTable.PSVersion`)
+- Git for Windows
+- Administrator privileges
+- MSI Claw hardware (or virtual machine for testing)
 
-```bash
-# Fork the repository on GitHub
-# Then clone your fork:
-git clone https://anonymousik.is-a.dev/msi-claw-aio-tweaker.git
-cd msi-claw-aio-tweaker
+**Recommended:**
+- Visual Studio Code with PowerShell extension
+- Pester 5.0+ (testing framework)
+- PSScriptAnalyzer (linting)
 
-# Add upstream remote:
-git remote add upstream https://anonymousik.is-a.dev/msi-claw-aio-tweaker.git
-```
+### Initial Setup
 
-#### 2. Create a Branch
+1. **Fork the Repository**
+   ```bash
+   # On GitHub, click "Fork" button
+   ```
 
-```bash
-# Update your fork:
-git checkout main
-git pull upstream main
+2. **Clone Your Fork**
+   ```powershell
+   git clone https://github.com/YOUR_USERNAME/msi-claw-aio-tweaker.git
+   cd msi-claw-aio-tweaker
+   ```
 
-# Create a feature branch:
-git checkout -b feature/your-feature-name
-# OR for bug fixes:
-git checkout -b fix/issue-123-description
-```
+3. **Add Upstream Remote**
+   ```powershell
+   git remote add upstream https://github.com/anonymousik/msi-claw-aio-tweaker.git
+   ```
 
-**Branch naming conventions:**
-- `feature/` - new features
-- `fix/` - bug fixes
-- `docs/` - documentation changes
-- `refactor/` - code refactoring
-- `test/` - test additions/improvements
-- `chore/` - maintenance tasks
+4. **Install Development Dependencies**
+   ```powershell
+   # Install Pester (testing framework)
+   Install-Module -Name Pester -Force -SkipPublisherCheck -Scope CurrentUser
+   
+   # Install PSScriptAnalyzer (linting)
+   Install-Module -Name PSScriptAnalyzer -Force -Scope CurrentUser
+   ```
 
-#### 3. Make Your Changes
+5. **Create a Development Branch**
+   ```powershell
+   git checkout -b feature/your-feature-name
+   # or
+   git checkout -b fix/bug-description
+   ```
 
-Follow our [Coding Standards](#coding-standards) (see below).
+---
 
-#### 4. Test Your Changes
+## Coding Standards
+
+### PowerShell Style Guide
+
+#### **1. Naming Conventions**
 
 ```powershell
-# Run the bootstrap in diagnostic mode:
-.\MSI_Claw_Optimizer_v5.0_BOOTSTRAP.ps1 -Mode DiagnosticOnly
+# ✅ GOOD: Use approved PowerShell verbs
+function Get-SystemInfo { }
+function Set-PowerPlan { }
+function Test-Compatibility { }
+function Start-Optimization { }
 
-# Test your specific changes thoroughly
-# Ensure no errors in logs
-
-# If adding new functions, add Pester tests:
-Invoke-Pester -Path tests/ -Output Detailed
+# ❌ BAD: Unapproved verbs
+function Fetch-SystemInfo { }      # Use Get-
+function Change-PowerPlan { }      # Use Set-
+function Check-Compatibility { }    # Use Test-
+function Run-Optimization { }      # Use Start-
 ```
 
-#### 5. Commit Your Changes
+**Approved Verb List:**
+- **Get** - Retrieve data
+- **Set** - Modify data
+- **Test** - Verify condition
+- **Start** - Begin operation
+- **Stop** - End operation
+- **New** - Create object
+- **Remove** - Delete object
+- **Invoke** - Execute action
 
-```bash
-# Stage your changes:
-git add .
+See full list: `Get-Verb`
 
-# Commit with a descriptive message:
-git commit -m "feat: add GPU temperature monitoring
+#### **2. Function Structure**
 
-- Implement real-time GPU temperature tracking
-- Add temperature warnings at 85°C
-- Display in diagnostics report
-
-Closes #123"
+```powershell
+function Verb-Noun {
+    <#
+    .SYNOPSIS
+        Brief description (one sentence)
+    
+    .DESCRIPTION
+        Detailed description of what the function does
+    
+    .PARAMETER ParameterName
+        Description of the parameter
+    
+    .EXAMPLE
+        Verb-Noun -ParameterName "Value"
+        Description of what this example does
+    
+    .OUTPUTS
+        [Type] Description of output
+    
+    .NOTES
+        Additional information
+    #>
+    
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
+        [string]$RequiredParam,
+        
+        [Parameter(Mandatory = $false)]
+        [switch]$OptionalSwitch
+    )
+    
+    # Function body
+    try {
+        # Main logic
+        Write-Verbose "Doing something with $RequiredParam"
+        
+        # Return result
+        return $result
+    }
+    catch {
+        Write-Error "Error in Verb-Noun: $_"
+        throw
+    }
+}
 ```
 
-**Commit message format:**
+#### **3. Security Best Practices**
+
+```powershell
+# ✅ GOOD: Use Start-Process instead of Invoke-Expression
+$args = @('/command', 'arg1', 'arg2')
+$process = Start-Process -FilePath 'executable.exe' -ArgumentList $args -NoNewWindow -Wait -PassThru
+
+# ❌ BAD: Never use Invoke-Expression
+Invoke-Expression "executable.exe /command arg1 arg2"  # SECURITY VULNERABILITY!
+
+# ✅ GOOD: Validate and sanitize user input
+function Read-HostSanitized {
+    param([ValidateSet('AlphaNumeric', 'FilePath', 'Email')]$Mode)
+    # ... sanitization logic
+}
+
+# ❌ BAD: Direct use of user input
+$userInput = Read-Host "Enter path"
+Set-Location $userInput  # INJECTION RISK!
+
+# ✅ GOOD: Verify file integrity
+$expectedHash = "ABC123..."
+$actualHash = (Get-FileHash -Path $file -Algorithm SHA256).Hash
+if ($actualHash -ne $expectedHash) {
+    throw "File integrity check failed!"
+}
+
+# ❌ BAD: No verification
+Invoke-WebRequest -Uri $url -OutFile $file
+Import-Module $file  # Could be compromised!
+```
+
+#### **4. Error Handling**
+
+```powershell
+# ✅ GOOD: Comprehensive error handling
+try {
+    $result = Get-SomeData -ErrorAction Stop
+    
+    if (-not $result) {
+        throw "No data returned"
+    }
+    
+    # Process result
+    return $result
+}
+catch {
+    Write-Error "Failed to get data: $_"
+    Write-Log -Level Error -Message "Exception: $($_.Exception.Message)"
+    throw
+}
+finally {
+    # Cleanup
+    if ($resource) {
+        $resource.Dispose()
+    }
+}
+
+# ❌ BAD: Silent failures
+$result = Get-SomeData -ErrorAction SilentlyContinue
+# No error checking, just hope it worked
+```
+
+#### **5. Logging**
+
+```powershell
+# ✅ GOOD: Use centralized logging
+Write-Log -Level Info -Message "Starting optimization"
+Write-Log -Level Warning -Message "BIOS version outdated"
+Write-Log -Level Error -Message "Failed to apply setting" -Exception $_
+
+# ✅ GOOD: Audit logging for security events
+Write-AuditLog -Action "ConfigurationChange" -Details @{
+    Setting = "MemoryIntegrity"
+    OldValue = "Enabled"
+    NewValue = "Disabled"
+    User = $env:USERNAME
+}
+
+# ❌ BAD: Ad-hoc logging
+Write-Host "Something happened"  # No persistence, not structured
+```
+
+#### **6. Comments and Documentation**
+
+```powershell
+# ✅ GOOD: Meaningful comments explaining WHY, not WHAT
+# Disable Memory Integrity because it causes 15-25% FPS degradation
+# on Intel Arc GPUs due to Hyper-V overhead
+Set-ItemProperty -Path $regPath -Name 'Enabled' -Value 0
+
+# ❌ BAD: Obvious comments explaining WHAT
+# Set the Enabled property to 0
+Set-ItemProperty -Path $regPath -Name 'Enabled' -Value 0
+
+# ✅ GOOD: Complex logic explained
+# The ASPM (Active State Power Management) setting uses:
+# 0 = Disabled (max performance, +5-8% GPU on AC power)
+# 1 = Moderate (balanced)
+# 2 = Aggressive (max power saving)
+$asPmValue = if ($OnBattery) { 1 } else { 0 }
+
+# ✅ GOOD: TODO comments with context
+# TODO: Add support for custom TDP limits (requires MSI Center M integration)
+# See issue #42: https://github.com/anonymousik/msi-claw-aio-tweaker/issues/42
+```
+
+---
+
+## Pull Request Process
+
+### 1. Before Submitting
+
+**Checklist:**
+
+- [ ] Code follows PowerShell style guide
+- [ ] All functions have proper documentation (`.SYNOPSIS`, `.DESCRIPTION`, etc.)
+- [ ] Security best practices followed (no Invoke-Expression, input validation, etc.)
+- [ ] Logging added for important operations
+- [ ] Error handling implemented
+- [ ] Tests added/updated (when applicable)
+- [ ] Documentation updated (README, INSTALLATION, etc.)
+- [ ] Tested on clean Windows installation
+- [ ] No breaking changes (or clearly documented if unavoidable)
+
+### 2. Commit Messages
+
+Follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
+
 ```
 <type>(<scope>): <subject>
 
@@ -214,493 +417,303 @@ Closes #123"
 ```
 
 **Types:**
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation changes
-- `style`: Code style changes (formatting, no logic change)
-- `refactor`: Code refactoring
-- `test`: Adding/updating tests
-- `chore`: Maintenance tasks
+- `feat:` New feature
+- `fix:` Bug fix
+- `docs:` Documentation changes
+- `style:` Code style changes (formatting, etc.)
+- `refactor:` Code refactoring
+- `test:` Adding/updating tests
+- `chore:` Maintenance tasks
 
-**Example:**
-```
-fix(diagnostics): correct BIOS version detection on Lunar Lake
-
-- Updated regex pattern to match Lunar Lake BIOS format
-- Added fallback for non-standard BIOS versions
-- Added unit test for version parsing
-
-Fixes #456
-```
-
-#### 6. Push and Create Pull Request
-
-```bash
-# Push to your fork:
-git push origin feature/your-feature-name
-
-# Then create a Pull Request on GitHub
-```
-
----
-
-### Documentation
-
-Documentation improvements are always welcome!
-
-**Areas needing documentation:**
-- User guides and tutorials
-- Code comments and docstrings
-- README improvements
-- FAQ additions
-- Troubleshooting guides
-- Translation to other languages
-
-**Documentation standards:**
-- Use clear, concise language
-- Include code examples where applicable
-- Add screenshots for UI-related docs
-- Keep formatting consistent with existing docs
-- Test all command examples before submitting
-
----
-
-### Testing
-
-Help us maintain quality by testing!
-
-**What to test:**
-- New releases (beta testing)
-- Pull requests
-- Different hardware configurations
-- Different Windows versions
-- Edge cases and error scenarios
-
-**How to become a beta tester:**
-1. Join our [Discord community](https://discord.gg/msiclaw) (if available)
-2. Comment on GitHub Discussions expressing interest
-3. Follow beta release announcements
-
-**Reporting test results:**
-```markdown
-**Test Configuration:**
-- Hardware: MSI Claw A1M 155H
-- Windows: 11 24H2 Build 26100.2314
-- BIOS: E1T41IMS.109
-- Arc Driver: 32.0.101.6877
-
-**Test Scenario:**
-Full optimization with Balanced profile
-
-**Results:**
-- ✅ All optimizations applied successfully
-- ✅ No errors in logs
-- ✅ FPS improved by 25% in Cyberpunk 2077
-- ✅ Battery life improved from 45min to 95min
-
-**Issues Found:**
-None
-
-**Screenshots:**
-[Attach if applicable]
-```
-
----
-
-## 🛠️ Development Setup
-
-### Prerequisites
-
-- **Windows 10 21H2+ or Windows 11 22H2+**
-- **PowerShell 5.1+** (PowerShell 7+ recommended for development)
-- **Git** for version control
-- **Code Editor**: VS Code with PowerShell extension (recommended)
-
-### Optional Tools
-
-- **Pester** (PowerShell testing framework): `Install-Module -Name Pester -Force`
-- **PSScriptAnalyzer** (linting): `Install-Module -Name PSScriptAnalyzer -Force`
-- **platyPS** (documentation): `Install-Module -Name platyPS -Force`
-
-### Project Structure
+**Examples:**
 
 ```
-msi-claw-aio-tweaker/
-├── MSI_Claw_Optimizer_v5.0_BOOTSTRAP.ps1  # Main entry point
-├── install.ps1                             # Auto-installer
-├── config.json                             # Configuration
-├── modules/
-│   ├── Diagnostics.psm1                    # Auto-diagnostics
-│   ├── Utils.psm1                          # Utility functions
-│   ├── Optimization.psm1                   # Optimization functions
-│   └── Backup.psm1                         # Backup system
-├── tests/                                  # Pester tests
-│   ├── Diagnostics.Tests.ps1
-│   ├── Utils.Tests.ps1
-│   ├── Optimization.Tests.ps1
-│   └── Backup.Tests.ps1
-├── docs/                                   # Documentation
-│   ├── README.md
-│   ├── INSTALLATION.md
-│   ├── QUICK_START.md
-│   └── API.md
-├── .github/
-│   ├── workflows/
-│   │   └── ci.yml                          # GitHub Actions CI/CD
-│   └── ISSUE_TEMPLATE/
-│       ├── bug_report.md
-│       └── feature_request.md
-├── CHANGELOG.md
-├── CONTRIBUTING.md                         # This file
-├── SECURITY.md
-└── LICENSE
+feat(optimization): add custom TDP profile support
+
+Added ability to create custom TDP profiles with user-defined
+wattage limits. Profiles are stored in config.json and can be
+applied via Set-PerformanceProfile.
+
+Closes #42
 ```
 
-### Setting Up Development Environment
+```
+fix(diagnostics): correct BIOS version detection for Claw 8 AI+
 
-```powershell
-# 1. Clone the repository
-git clone https://anonymousik.is-a.dev/msi-claw-aio-tweaker.git
-cd msi-claw-aio-tweaker
+BIOS version regex was not matching Lunar Lake BIOS format.
+Updated pattern to support both Meteor Lake and Lunar Lake.
 
-# 2. Install development dependencies
-Install-Module -Name Pester -Force -SkipPublisherCheck
-Install-Module -Name PSScriptAnalyzer -Force
-
-# 3. Run linter
-Invoke-ScriptAnalyzer -Path . -Recurse -ReportSummary
-
-# 4. Run tests
-Invoke-Pester -Path tests/ -Output Detailed
-
-# 5. Open in VS Code
-code .
+Fixes #58
 ```
 
-### VS Code Recommended Extensions
+```
+docs(readme): update installation instructions
 
-```json
-{
-  "recommendations": [
-    "ms-vscode.powershell",
-    "streetsidesoftware.code-spell-checker",
-    "editorconfig.editorconfig",
-    "yzhang.markdown-all-in-one"
-  ]
-}
+Added troubleshooting section for Windows Defender false positives.
+Clarified PowerShell execution policy requirements.
 ```
 
----
-
-## 📐 Coding Standards
-
-### PowerShell Style Guide
-
-We follow the [PowerShell Practice and Style Guide](https://poshcode.gitbook.io/powershell-practice-and-style/).
-
-#### Key Points
-
-**1. Naming Conventions**
-
-```powershell
-# ✅ GOOD - Approved verbs, PascalCase
-function Get-SystemHealth { }
-function Set-PerformanceProfile { }
-function Test-HardwareCompatibility { }
-
-# ❌ BAD - Unapproved verbs, wrong case
-function Fetch-SystemHealth { }
-function Apply-PerformanceProfile { }
-function check-hardware { }
-```
-
-**2. Parameter Naming**
-
-```powershell
-# ✅ GOOD - Clear, descriptive, PascalCase
-param(
-    [string]$BackupId,
-    [switch]$Force,
-    [int]$MaxRetries = 3
-)
-
-# ❌ BAD - Unclear, abbreviations, wrong case
-param(
-    [string]$bid,
-    [switch]$f,
-    [int]$max_retries = 3
-)
-```
-
-**3. Comment-Based Help**
-
-```powershell
-function Set-PerformanceProfile {
-    <#
-    .SYNOPSIS
-        Applies a performance profile to the system.
-    
-    .DESCRIPTION
-        Configures Windows power settings to match the specified
-        performance profile (Performance, Balanced, or Battery).
-    
-    .PARAMETER Profile
-        The profile to apply. Valid values: Performance, Balanced, Battery.
-    
-    .EXAMPLE
-        Set-PerformanceProfile -Profile Balanced
-        
-        Applies the Balanced profile (17W TDP, 90-120min battery).
-    
-    .OUTPUTS
-        [hashtable] Results of profile application.
-    
-    .NOTES
-        Requires Administrator privileges.
-    #>
-    param(
-        [Parameter(Mandatory = $true)]
-        [ValidateSet('Performance', 'Balanced', 'Battery')]
-        [string]$Profile
-    )
-    
-    # Function implementation...
-}
-```
-
-**4. Error Handling**
-
-```powershell
-# ✅ GOOD - Comprehensive try-catch with cleanup
-function Get-SystemInfo {
-    try {
-        $data = Get-CimInstance -ClassName Win32_Processor -ErrorAction Stop
-        
-        return @{
-            Success = $true
-            Data = $data
-        }
-    }
-    catch {
-        Write-Log "Failed to get system info: $_" -Level Error
-        
-        return @{
-            Success = $false
-            Error = $_.Exception.Message
-        }
-    }
-    finally {
-        # Cleanup code
-    }
-}
-
-# ❌ BAD - No error handling
-function Get-SystemInfo {
-    $data = Get-CimInstance -ClassName Win32_Processor
-    return $data
-}
-```
-
-**5. Security - No Invoke-Expression**
-
-```powershell
-# ✅ GOOD - Use Start-Process
-$procArgs = @('/export', $regPath, $outputFile, '/y')
-$process = Start-Process -FilePath 'reg.exe' -ArgumentList $procArgs -NoNewWindow -Wait -PassThru
-
-# ❌ BAD - Security vulnerability!
-$command = "reg export `"$regPath`" `"$outputFile`" /y"
-Invoke-Expression $command
-```
-
-**6. Input Validation**
-
-```powershell
-# ✅ GOOD - Validated parameters
-param(
-    [Parameter(Mandatory = $true)]
-    [ValidateNotNullOrEmpty()]
-    [ValidateSet('Performance', 'Balanced', 'Battery')]
-    [string]$Profile,
-    
-    [Parameter(Mandatory = $false)]
-    [ValidateRange(1, 100)]
-    [int]$MaxBackups = 10
-)
-
-# ❌ BAD - No validation
-param(
-    [string]$Profile,
-    [int]$MaxBackups
-)
-```
-
-**7. Output Formatting**
-
-```powershell
-# ✅ GOOD - Structured output
-Write-Host "`n[OPTIMIZATION] Starting optimization..." -ForegroundColor Cyan
-Write-Host "  [1/5] Configuring hibernation..." -ForegroundColor Gray
-Write-Host "    ✓ Hibernation enabled" -ForegroundColor Green
-Write-Host "    ✗ Failed to disable wake timers" -ForegroundColor Red
-
-# ❌ BAD - Inconsistent, unclear
-Write-Host "starting optimization"
-Write-Host "configuring hibernation"
-Write-Host "done"
-```
-
-### Code Quality Metrics
-
-**Required:**
-- PSScriptAnalyzer: 0 errors, <5 warnings
-- Pester tests: >80% code coverage for new functions
-- Function length: <100 lines (prefer <50)
-- Cyclomatic complexity: <10
-- Comments: 15-25% of LOC
-
-**Tools:**
-
-```powershell
-# Run PSScriptAnalyzer
-Invoke-ScriptAnalyzer -Path .\modules\ -Recurse -ReportSummary
-
-# Run Pester tests with coverage
-Invoke-Pester -Path tests/ -CodeCoverage modules\*.psm1 -CodeCoverageOutputFile coverage.xml
-
-# Check function complexity (manual review)
-# Keep functions focused on single responsibility
-```
-
-### Security Standards
-
-**MUST:**
-- ✅ No Invoke-Expression
-- ✅ All downloads: SHA256 verification
-- ✅ All user inputs: sanitized
-- ✅ All external commands: via Start-Process
-- ✅ All sensitive operations: logged to audit trail
-- ✅ All files: integrity checked before execution
-
-**MUST NOT:**
-- ❌ Hardcode credentials
-- ❌ Store passwords in plain text
-- ❌ Execute arbitrary code from user input
-- ❌ Download files without verification
-- ❌ Modify system without backup
-
----
-
-## 🔄 Pull Request Process
-
-### Before Submitting
-
-**Checklist:**
-- [ ] Code follows PowerShell style guide
-- [ ] All tests pass (`Invoke-Pester`)
-- [ ] PSScriptAnalyzer shows 0 errors
-- [ ] Comment-based help added for new functions
-- [ ] Updated CHANGELOG.md
-- [ ] Updated documentation if needed
-- [ ] Tested on actual MSI Claw hardware (if possible)
-- [ ] No merge conflicts with `main` branch
-
-### PR Template
+### 3. Pull Request Template
 
 ```markdown
 ## Description
-Brief description of changes.
+<!-- Describe your changes in detail -->
 
-## Type of Change
-- [ ] Bug fix (non-breaking change fixing an issue)
-- [ ] New feature (non-breaking change adding functionality)
-- [ ] Breaking change (fix or feature causing existing functionality to change)
+## Motivation and Context
+<!-- Why is this change required? What problem does it solve? -->
+<!-- If it fixes an open issue, please link to the issue here. -->
+
+## How Has This Been Tested?
+<!-- Describe how you tested your changes -->
+- [ ] Tested on MSI Claw A1M (Core Ultra 7 155H)
+- [ ] Tested on MSI Claw 8 AI+ (Lunar Lake)
+- [ ] Tested on clean Windows 11 installation
+- [ ] Tested all affected functions manually
+- [ ] Added automated tests (if applicable)
+
+## Types of Changes
+<!-- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to change)
 - [ ] Documentation update
 
-## Related Issues
-Fixes #123
-Relates to #456
-
-## Testing
-Describe how you tested your changes:
-- [ ] Tested on MSI Claw A1M 155H, Windows 11 24H2
-- [ ] All Pester tests pass
-- [ ] PSScriptAnalyzer clean
-- [ ] Manual testing completed
-
-## Screenshots (if applicable)
-[Add screenshots here]
-
-## Checklist
-- [ ] My code follows the project's coding standards
-- [ ] I have performed a self-review
-- [ ] I have commented my code where necessary
-- [ ] I have updated the documentation
-- [ ] I have added tests that prove my fix/feature works
-- [ ] New and existing tests pass locally
-- [ ] I have updated CHANGELOG.md
+## Checklist:
+- [ ] My code follows the PowerShell style guide
+- [ ] I have added/updated documentation
+- [ ] I have added/updated tests (if applicable)
+- [ ] All new and existing tests passed
+- [ ] I have updated the CHANGELOG.md
+- [ ] My changes don't introduce any security vulnerabilities
+- [ ] I have tested my changes on actual MSI Claw hardware
 ```
 
-### Review Process
+### 4. Review Process
 
-1. **Automatic Checks**: GitHub Actions runs tests and linters
-2. **Code Review**: Maintainers review code quality and logic
-3. **Testing**: Changes tested on real hardware if applicable
-4. **Approval**: Requires 1 maintainer approval
-5. **Merge**: Squash and merge to `main`
-
-### After Merge
-
-- Your contribution will be credited in CHANGELOG.md
-- You'll be added to contributors list
-- Changes included in next release
+1. **Automated Checks**
+   - PSScriptAnalyzer (linting)
+   - Pester tests (if CI/CD enabled)
+   - Security scan
+   
+2. **Manual Review**
+   - Code quality review by maintainer
+   - Security review for sensitive changes
+   - Testing on MSI Claw hardware (if applicable)
+   
+3. **Feedback**
+   - Address review comments
+   - Update PR as needed
+   - Re-request review
+   
+4. **Merge**
+   - PR approved by maintainer
+   - All checks passed
+   - Merged to `main` branch
 
 ---
 
-## 👥 Community
+## Testing Guidelines
+
+### Unit Testing with Pester
+
+```powershell
+# Example: Test for Set-HibernationConfiguration function
+
+Describe 'Set-HibernationConfiguration' {
+    Context 'When hibernation is disabled' {
+        It 'Should enable hibernation' {
+            # Arrange
+            Mock Get-Command { $true }  # powercfg available
+            Mock Start-Process { @{ ExitCode = 0 } }
+            
+            # Act
+            $result = Set-HibernationConfiguration
+            
+            # Assert
+            $result.Success | Should -Be $true
+            $result.Changes | Should -Contain 'Hibernation enabled'
+        }
+    }
+    
+    Context 'When powercfg fails' {
+        It 'Should handle error gracefully' {
+            # Arrange
+            Mock Start-Process { @{ ExitCode = 1 } }
+            
+            # Act
+            $result = Set-HibernationConfiguration
+            
+            # Assert
+            $result.Success | Should -Be $false
+            $result.Errors.Count | Should -BeGreaterThan 0
+        }
+    }
+}
+```
+
+### Integration Testing
+
+```powershell
+# Example: Test full optimization workflow
+
+Describe 'Full Optimization Workflow' {
+    It 'Should complete without errors on clean system' {
+        # This requires actual MSI Claw hardware or VM
+        
+        # Arrange
+        $backupId = New-SystemBackup -Description "Pre-test backup"
+        
+        # Act
+        $result = Start-FullOptimization -Mode Automatic
+        
+        # Assert
+        $result.OverallSuccess | Should -Be $true
+        
+        # Cleanup
+        Restore-SystemBackup -BackupId $backupId -Force
+    }
+}
+```
+
+### Test Coverage Goals
+
+- **Minimum:** 50% code coverage
+- **Target:** 70% code coverage
+- **Critical functions:** 90%+ coverage (security, backup, diagnostics)
+
+---
+
+## Documentation Guidelines
+
+### Where to Document
+
+- **README.md** - Project overview, quick start
+- **INSTALLATION.md** - Detailed installation, troubleshooting
+- **QUICK_START.md** - Fast setup guide
+- **WIKI.md** - In-depth technical documentation
+- **Code Comments** - Inline documentation for complex logic
+- **Function Documentation** - `.SYNOPSIS`, `.DESCRIPTION`, `.EXAMPLE` blocks
+
+### Documentation Standards
+
+```powershell
+<#
+.SYNOPSIS
+    Brief one-line description
+
+.DESCRIPTION
+    Detailed description explaining:
+    - What the function does
+    - Why it's needed
+    - How it works (at a high level)
+    - Any important considerations
+
+.PARAMETER ParameterName
+    What this parameter does
+    Valid values and their meanings
+
+.EXAMPLE
+    Actual-FunctionName -Parameter "Value"
+    
+    Description of what this example demonstrates
+
+.EXAMPLE
+    Actual-FunctionName -Parameter "Value" -AnotherParam
+    
+    Description of this more complex example
+
+.OUTPUTS
+    [Type] Description of what is returned
+
+.NOTES
+    Author: Anonymousik (SecFERRO Division)
+    Version: 5.0.0
+    Last Modified: 2026-02-11
+    
+    Additional notes about:
+    - Compatibility requirements
+    - Performance considerations
+    - Security implications
+#>
+```
+
+---
+
+## Security Guidelines
+
+### Security-First Development
+
+1. **Never Use Invoke-Expression**
+   - Use `Start-Process` with argument arrays
+   - Prevents command injection attacks
+
+2. **Always Validate Input**
+   - Use `[ValidateSet()]` for enums
+   - Use `Read-HostSanitized` for user input
+   - Check file paths before use
+
+3. **Verify Downloads**
+   - Always use HTTPS
+   - Verify SHA256 hashes
+   - Optional: Check digital signatures
+
+4. **Audit Logging**
+   - Log all security-relevant events
+   - Log configuration changes
+   - Log privilege escalations
+
+5. **Least Privilege**
+   - Only elevate when necessary
+   - Drop privileges after sensitive operations
+   - Document why elevation is needed
+
+### Reporting Security Vulnerabilities
+
+**DO NOT** open a public issue for security vulnerabilities.
+
+Instead, email: [security details to be added]
+
+Include:
+- Description of the vulnerability
+- Steps to reproduce
+- Potential impact
+- Suggested fix (if any)
+
+See [SECURITY.md](SECURITY.md) for full policy.
+
+---
+
+## Community
 
 ### Where to Get Help
 
-- **GitHub Discussions**: https://anonymousik.is-a.dev/msi-claw-aio-tweaker/discussions
-- **Reddit**: r/MSIClaw
-- **MSI Forum**: https://forum-en.msi.com/index.php?forums/gaming-handhelds.182/
+- **GitHub Issues:** https://github.com/anonymousik/msi-claw-aio-tweaker/issues
+- **Reddit:** r/MSIClaw
+- **Discord:** [Link to be added]
 
-### Communication Channels
+### Recognition
 
-- **Bug Reports**: GitHub Issues
-- **Feature Requests**: GitHub Issues with `enhancement` label
-- **General Discussion**: GitHub Discussions
-- **Real-time Chat**: Reddit r/MSIClaw (no official Discord yet)
-
-### Getting Recognition
-
-**Contributors are recognized in:**
-- CHANGELOG.md (for each release)
-- README.md (contributors section)
-- Release notes
-- Social media shoutouts (with permission)
-
-**Top contributors may receive:**
-- Early access to beta releases
-- Direct collaboration on new features
-- Invitation to maintainer team
+Contributors will be:
+- Listed in CHANGELOG.md
+- Credited in release notes
+- Added to CONTRIBUTORS.md (if significant contribution)
 
 ---
 
-## 📜 License
+## License
 
-By contributing, you agree that your contributions will be licensed under the same license as the project (Educational Use Only).
-
----
-
-## 🙏 Thank You!
-
-Your contributions make MSI Claw AIO Tweaker better for everyone in the community.
-
-**Questions?** Open a [GitHub Discussion](https://anonymousik.is-a.dev/msi-claw-aio-tweaker/discussions)
-
-**Project Maintainer**: Anonymousik (SecFERRO Division)
+By contributing, you agree that your contributions will be licensed under the MIT License.
 
 ---
 
-*Last Updated: 2026-02-11*
+## Thank You!
+
+Your contributions make MSI Claw AIO Tweaker better for everyone. We appreciate your time and effort! 🎉
+
+**Questions?** Open an issue or reach out to the maintainer.
+
+---
+
+**Maintainer:** Anonymousik (SecFERRO Division)  
+**Repository:** https://anonymousik.is-a.dev/msi-claw-aio-tweaker  
+**Last Updated:** 2026-02-11
