@@ -1,6 +1,7 @@
 # MSI CLAW OPTIMIZER v5.0 🚀
-
 <div align="center">
+  
+![Hello](https://github.com/user-attachments/assets/aab7c14f-4efb-48ba-aebe-1bd32c1490ba)
 
 ![Version](https://img.shields.io/badge/version-5.0.0-blue.svg)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-green.svg)
