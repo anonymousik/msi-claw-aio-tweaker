@@ -17,7 +17,6 @@
 - ✅ Windows 11 24H2
 
 ---
-
 ## 🚀 SZYBKA INSTALACJA (1 MINUTA)
 
 ### Metoda 1: Automatyczna instalacja (ZALECANA)
