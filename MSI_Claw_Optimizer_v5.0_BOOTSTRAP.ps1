@@ -90,8 +90,8 @@ $Script:Config = @{
     TempDir = Join-Path $env:TEMP 'MSI_Claw_Optimizer'
     
     # Update configuration
-    UpdateCheckURL = 'https://raw.githubusercontent.com/anonymousik/MSI-Claw-Optimizer/main/version.json'
-    UpdateDownloadURL = 'https://github.com/anonymousik/MSI-Claw-Optimizer/releases/latest/download'
+    UpdateCheckURL = 'https://raw.githubusercontent.com/anonymousik/msi-claw-aio-tweaker/main/version.json'
+    UpdateDownloadURL = 'https://github.com/anonymousik/msi-claw-aio-tweaker/releases/latest/download'
     
     # Required modules
     RequiredModules = @('Diagnostics', 'Backup', 'Optimization', 'Utils')
