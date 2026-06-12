@@ -2,9 +2,10 @@
 <div align="center">
  RECOMMENDED FOR ADVANCED USERS ! 
 </div>
-''⚠️READ THE INFORMATION BELOW, BEFORE USAGE!''
  👇 
-''This tool has not been fully tested and may require some improvements and fixes!This is a conceptual project that was created as a hobby and there is no guarantee of regular development and technical support on my part.. Use wisely and responsibly!''
+'' 
+This tool has not been fully tested and may require some improvements and fixes!This is a conceptual project that was created as a hobby and there is no guarantee of regular development and technical support on my part.. Use wisely and responsibly!
+''
 
 <div align="center">
   
