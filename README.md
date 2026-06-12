@@ -1,4 +1,4 @@
-# MSI CLAW OPTIMIZER v5.0 🚀
+# MSI CLAW OPTIMIZER v5.0 🚀 (#msi-claw, #powershell, #optimization, #windows-11, #intel-arc, #gaming-handheld, #performance-tweaker)
 
 ![ENGLISH VERSION 🇺🇸](https://github.com/anonymousik/msi-claw-aio-tweaker/blob/main/README_EN.md)
 ![PO POLSKU 🇵🇱] ``` JESTEŚ TUTAJ:) ```
