@@ -1,8 +1,13 @@
 # MSI CLAW OPTIMIZER v5.0 🚀
 
+## ⚠️ WARNING - READ BEFORE USAGE!
 ```
-This software is provided "AS IS" without warranty of any kind.
-Use at your own risk. May void manufacturer warranty.
+If you're familiar with terms like PowerShell or shell, this might be the tool for you! 🙃
+
+This software is provided "AS IS" without warranty of any kind. 
+Use at your own risk.
+May void manufacturer warranty.
+(But it probably it shouldn't..)
 Not affiliated with MSI or Intel.
 ```
 
