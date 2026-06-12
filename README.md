@@ -1,7 +1,6 @@
 # MSI CLAW OPTIMIZER v5.0 🚀
 
-## ⚠️ WARNING
-###❗READ BEFORE USAGE❗
+## ⚠️ WARNING![READ BEFORE USAGE...]
 ```
 If you're familiar with terms like PowerShell or shell, this might be the tool for you! 🙃
 
