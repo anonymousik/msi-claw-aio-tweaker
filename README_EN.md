@@ -18,8 +18,8 @@
 
 ≫[📥 LATEST RELEASE](https://github.com/anonymousik/msi-claw-aio-tweaker/releases/latest) 
 ≫[📖 DOCS](docs/INSTALLATION.md)
-
 ≫[👨‍💻BUG-REPORT](https://github.com/anonymousik/msi-claw-aio-tweaker/issues) 
+
 ≫[📱 LIVE-MONIT (Demo)](https://anonymousik.is-a.dev/msi-claw-aio-tweaker/mobile_demo)
 
 ---
