@@ -1,18 +1,11 @@
-# MSI CLAW OPTIMIZER v5.0 🚀 
-
 [![English Version](https://img.shields.io/badge/Read_in-English-blue?style=flat-square)](README_EN.md)
 
 <div align="center">
 <a href="https://github.com/anonymousik/msi-claw-aio-tweaker">
 <img src="https://github.com/user-attachments/assets/aab7c14f-4efb-48ba-aebe-1bd32c1490ba" alt="SecFERRO Division - MSI Claw Optimizer Banner" width="100%">
 </a>
+
 # MSI Claw Optimizer (v5.0.0)
-English Version
-
-Wersja
-
-PowerShell
-
 **Zaawansowany framework do kompleksowej optymalizacji MSI Claw Handheld Gaming PC**
 📥 Pobierz najnowszą wersję •
 📖 Dokumentacja •
