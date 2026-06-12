@@ -15,12 +15,12 @@
 [![Security](https://img.shields.io/badge/security-SHA256_Verified-success.svg?style=flat-square)]()
 
 **Advanced framework for comprehensive optimization of the MSI Claw Handheld Gaming PC**
-</div>
+
 [📥 LATEST RELEASE](https://github.com/anonymousik/msi-claw-aio-tweaker/releases/latest) •[📖DOCS](docs/INSTALLATION.md)        •[👨‍💻BUG-REPORT](https://github.com/anonymousik/msi-claw-aio-tweaker/issues) 
 •[📱 LIVE-MONIT (Demo)](https://anonymousik.is-a.dev/msi-claw-aio-tweaker/mobile_demo)
 
 ---
-
+</div>
 
 > [!WARNING]  
 > **Disclaimer:** This software modifies Windows Registry keys, system services, and power plans. It is provided "AS IS" without warranty of any kind. Use at your own risk. This tool is not an official product of MSI or Intel and may theoretically affect warranty conditions.
