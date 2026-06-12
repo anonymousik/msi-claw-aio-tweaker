@@ -16,10 +16,10 @@
 
 **Advanced framework for comprehensive optimization of the MSI Claw Handheld Gaming PC**
 
-[📥 LATEST RELEASE](https://github.com/anonymousik/msi-claw-aio-tweaker/releases/latest) •
-[📖 DOCS](docs/INSTALLATION.md) •
-[🐛 BUG-REPORT](https://github.com/anonymousik/msi-claw-aio-tweaker/issues) •
-[📱 LIVE-MONIT (Demo)](https://anonymousik.is-a.dev/msi-claw-aio-tweaker/mobile_demo)
+[📥 LATEST RELEASE](https://github.com/anonymousik/msi-claw-aio-tweaker/releases/latest) 
+•[📖 DOCS](docs/INSTALLATION.md)
+•[👨‍💻BUG-REPORT](https://github.com/anonymousik/msi-claw-aio-tweaker/issues) 
+•[📱 LIVE-MONIT (Demo)](https://anonymousik.is-a.dev/msi-claw-aio-tweaker/mobile_demo)
 
 ---
 
