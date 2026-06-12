@@ -1,10 +1,11 @@
 # MSI CLAW OPTIMIZER v5.0 🚀
-<div align="center">
-RECOMMENDED FOR ADVANCED USERS !
-```( This tool has not been fully tested and may require some improvements and fixes!This is a conceptual project that was created as a hobby and there is no guarantee of regular development and technical support on my part.. 
-Use wisely and responsibly! )
+
 ```
-</div>
+This software is provided "AS IS" without warranty of any kind.
+Use at your own risk. May void manufacturer warranty.
+Not affiliated with MSI or Intel.
+```
+
 <div align="center">
   
 ![Hello](https://github.com/user-attachments/assets/aab7c14f-4efb-48ba-aebe-1bd32c1490ba)
@@ -350,12 +351,6 @@ Security policy: [SECURITY.md](SECURITY.md)
 **Educational Use Only**
 
 Copyright © 2026 Nieznany Nikomu Anonymousik @ SecFERRO DIVISION
-
-```
-This software is provided "AS IS" without warranty of any kind.
-Use at your own risk. May void manufacturer warranty.
-Not affiliated with MSI or Intel.
-```
 
 ---
 
