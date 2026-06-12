@@ -1,0 +1,21 @@
+ name: PowerShell Code Quality & Security Audit
+
+# Uruchamiaj przy każdym wgrywaniu kodu na branch 'main' oraz przy Pull Requestach
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  analyze:
+    name: PSScriptAnalyzer
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run PSScriptAnalyzer
+        shell: pwsh
+        run: |
+          Invoke-ScriptAnalyzer -Path ./ -Recurse -Severity Error,Warning
