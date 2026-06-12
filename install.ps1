@@ -4,8 +4,8 @@
 .SYNOPSIS
     MSI Claw Optimizer v5.0 - Auto-Installer
     
-.DESCRIPTION
-    Automatyczny instalator dla MSI Claw Optimizer
+.DESCRIPTION 
+Automatyczny instalator dla MSI Claw Optimizer, który 
     Pobiera, weryfikuje i instaluje framework
 #>
 
