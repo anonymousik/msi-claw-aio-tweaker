@@ -1,15 +1,14 @@
 # MSI CLAW OPTIMIZER v5.0 🚀
 
-## ⚠️ WARNING!
-[READ BEFORE USAGE...]
-```
-If you're familiar with terms like PowerShell or shell, this might be the tool for you! 🙃
+![ENGLISH VERSION 🇺🇸](https://github.com/anonymousik/msi-claw-aio-tweaker/blob/main/README_EN.md)
+![PO POLSKU 🇵🇱] ``` JESTEŚ TUTAJ:) ```
 
-This software is provided "AS IS" without warranty of any kind. 
-Use at your own risk.
-May void manufacturer warranty.
+## ⚠️ **UWAGA - PRZECZYTAJ PRZED UŻYCIEM!If you're familiar with terms like PowerShell or shell, this might be the tool for you! 🙃
+!This software is provided "AS IS" without warranty of any kind. 
+!Use at your own risk.
+!May void manufacturer warranty.
 (But it probably it shouldn't..)
-Not affiliated with MSI or Intel.
+!Not affiliated with MSI or Intel.
 ```
 
 <div align="center">
