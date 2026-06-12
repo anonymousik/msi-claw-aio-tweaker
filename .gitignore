@@ -1,0 +1,9 @@
+*.log
+*.tmp
+*.bak
+.vscode/
+.vs/
+*.zip
+*.rar
+*.7z
+*PSScriptAnalyzerSettings.psd1
